@@ -1,69 +1,168 @@
-/* Styling untuk container utama navbar */
-.navbar-container {
+/* ==================================
+   SETUP UTAMA & CONTAINER
+===================================== */
+.navbar-wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px; /* Lebar maksimum konten */
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang lebih modern */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  width: 100%;
-  box-sizing: border-box; /* Mencegah padding mempengaruhi lebar total */
+  height: 100%;
 }
 
-/* Styling untuk logo */
-.navbar-logo a {
+/* ==================================
+   BAGIAN ATAS (MERAH)
+===================================== */
+.top-bar {
+  background-color: #c00000; /* Warna merah sesuai referensi */
+  color: white;
+  padding: 10px 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.contact-info,
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Jarak antar item */
+}
+
+.contact-info span,
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Jarak antara ikon dan teks */
+  color: white;
   text-decoration: none;
-  color: #333;
-  font-size: 1.3em; /* Sedikit lebih besar */
-  font-weight: 400; /* Font normal */
-  letter-spacing: 1px;
+  transition: opacity 0.3s ease;
 }
 
-.navbar-logo strong {
-  font-weight: 800; /* Font tebal untuk bagian pertama */
+.social-links a:hover {
+  opacity: 0.8;
 }
 
-/* Styling untuk daftar link navigasi */
+/* ==================================
+   BAGIAN BAWAH (PUTIH)
+===================================== */
+.bottom-bar {
+  padding: 15px 0;
+  height: 70px; /* Memberi tinggi yang konsisten */
+}
+
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo-img {
+  height: 50px; /* Atur tinggi logo, Anda bisa sesuaikan nilainya */
+  width: auto; /* Lebar akan menyesuaikan secara otomatis */
+}
+
 .navbar-links {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
-  gap: 40px; /* Jarak antar link sedikit lebih besar */
+  gap: 35px; /* Jarak antar link navigasi */
+  align-items: center;
 }
 
 .navbar-links li a {
   text-decoration: none;
-  color: #555;
-  font-weight: bold;
-  font-size: 0.9em;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
   padding-bottom: 5px;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  border-bottom: 2px solid transparent; /* Garis bawah transparan */
+  transition: color 0.3s ease;
 }
 
 .navbar-links li a:hover {
-  color: #007bff;
-  border-bottom: 2px solid #007bff; /* Garis bawah muncul saat hover */
+  color: #c00000; /* Warna teks saat di-hover */
 }
 
-/* Styling untuk tombol Call-to-Action (CTA) */
-.navbar-cta-button {
-  background-color: #1a73e8; /* Warna biru yang lebih cerah */
-  color: #ffffff;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 5px;
-  font-weight: bold;
+.navbar-links li a.active-link {
+  color: #c00000;
+  border-bottom: 2px solid #c00000;
+}
+
+.search-icon {
+  font-size: 1.3rem;
+  color: #333;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.navbar-cta-button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px); /* Efek sedikit terangkat saat hover */
+.menu-icon {
+  display: none; /* Sembunyikan di desktop */
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* ==================================
+   RESPONSIVE DESIGN (MOBILE)
+===================================== */
+@media (max-width: 992px) {
+  /* Sembunyikan beberapa item di tablet untuk menghemat ruang */
+  .contact-info span:first-child {
+    display: none;
+  }
+  .social-links a {
+    font-size: 0; /* Sembunyikan teks, tampilkan ikon saja */
+  }
+  .social-links a svg {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Sembunyikan bar atas di mobile */
+  .top-bar {
+    display: none;
+  }
+
+  /* Tampilkan tombol hamburger */
+  .menu-icon {
+    display: block;
+    order: 2; /* Pindahkan ke kanan */
+  }
+
+  /* Sembunyikan ikon pencarian di mobile */
+  .search-icon {
+    display: none;
+  }
+
+  /* Styling untuk menu mobile */
+  .navbar-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100px; /* Posisikan di bawah navbar */
+    left: -100%; /* Sembunyikan di luar layar */
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .navbar-links.active {
+    left: 0; /* Tampilkan saat menu aktif */
+  }
+
+  .navbar-links li {
+    padding: 10px 0;
+  }
 }

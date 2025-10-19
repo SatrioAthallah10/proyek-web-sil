@@ -1,0 +1,40 @@
+/* Styling untuk Marquee Section */
+.marquee-section {
+  background-color: #f1f1f1; /* Warna latar belakang abu-abu muda */
+  padding: 15px 0;
+  overflow: hidden; /* Penting untuk menyembunyikan teks saat di luar layar */
+  white-space: nowrap; /* Mencegah teks turun ke baris baru */
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.marquee-content {
+  display: inline-block; /* Membuat konten menjadi satu baris */
+  padding-left: 100%; /* Memulai animasi dari ujung kanan layar */
+  animation: marquee-animation 25s linear infinite; /* Atur durasi animasi di sini */
+  display: flex;
+  align-items: center;
+}
+
+.location-icon {
+  color: #c00000; /* Warna merah ikon */
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.marquee-text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Keyframes untuk animasi bergerak */
+@keyframes marquee-animation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

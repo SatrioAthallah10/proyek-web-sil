@@ -1,15 +1,17 @@
 import React from 'react';
-import Navbar from './components/Navbar'; // Import komponen Navbar
-import './App.css'; // Anda bisa menggunakan ini untuk styling halaman lainnya
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Marquee from './components/Marquee'; // <-- 1. Impor komponen Marquee
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <Hero />
+      <Marquee /> {/* <-- 2. Tambahkan komponen Marquee di sini */}
       <main>
-        {/* Konten halaman Anda akan berada di sini */}
-        <h1>Selamat Datang di Website Saya</h1>
-        <p>Ini adalah konten utama halaman.</p>
+        {/* Konten halaman lainnya nanti akan ada di sini */}
       </main>
     </div>
   );
