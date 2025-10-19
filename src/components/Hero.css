@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh; /* Tinggi 90% dari viewport height */
+  height: 70vh; 
   color: white;
   text-align: center;
   padding: 0 20px;
@@ -13,7 +13,8 @@
 
 /* OPSI 1: Modern & Profesional */
 .hero-option-1 {
-  background-image: url('https://images.unsplash.com/photo-1577562433989-53e3edc2a4f4?q=80&w=2070&auto=format&fit=crop'); /* Ganti dengan URL gambar Anda */
+  /* URL gambar diubah ke path lokal di folder assets */
+  background-image: url('../assets/hero_section.png'); 
   background-size: cover;
   background-position: center;
 }
@@ -50,7 +51,7 @@
 }
 
 .hero-cta-button {
-  background-color: #c00000; /* Warna merah dari navbar */
+  background-color: #6D94C5; /* Warna merah dari navbar */
   color: white;
   padding: 15px 35px;
   border-radius: 5px;
@@ -61,7 +62,7 @@
 }
 
 .hero-cta-button:hover {
-  background-color: #a00000;
+  background-color: #CBDCEB;
   transform: translateY(-3px);
 }
 

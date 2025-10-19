@@ -1,7 +1,9 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Marquee from './components/Marquee'; // <-- 1. Impor komponen Marquee
+import Marquee from './components/Marquee';
+import Footer from './components/Footer'; // <-- 1. Impor komponen Footer
+
 import './App.css';
 
 function App() {
@@ -9,10 +11,11 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      <Marquee /> {/* <-- 2. Tambahkan komponen Marquee di sini */}
+      <Marquee />
       <main>
         {/* Konten halaman lainnya nanti akan ada di sini */}
       </main>
+      <Footer /> {/* <-- 2. Tambahkan komponen Footer di sini */}
     </div>
   );
 }

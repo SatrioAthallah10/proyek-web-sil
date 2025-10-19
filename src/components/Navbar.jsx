@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// 1. Impor logo dari folder assets
 import Logo from '../assets/samudera-letari.svg'; 
 import { FaEnvelope, FaPhone, FaFacebookF, FaInstagram, FaYoutube, FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
@@ -36,7 +35,6 @@ const Navbar = () => {
       <nav className="bottom-bar">
         <div className="container">
           <div className="navbar-logo">
-            {/* 2. Ganti teks dengan tag <img> yang berisi logo */}
             <a href="/">
               <img src={Logo} alt="Samudera Indah Lestari Logo" className="navbar-logo-img" />
             </a>
@@ -50,9 +48,8 @@ const Navbar = () => {
           {/* Daftar Link Navigasi */}
           <ul className={isMobileMenuOpen ? 'navbar-links active' : 'navbar-links'}>
             <li><a href="/" className="active-link">Home</a></li>
-            <li><a href="/tentang">Tentang Kami</a></li>
+            {/* ITEM "TENTANG KAMI" DAN "GALERI" DIHAPUS DARI SINI */}
             <li><a href="/layanan">Layanan</a></li>
-            <li><a href="/galeri">Galeri</a></li>
             <li><a href="/news">News</a></li>
             <li><a href="/kontak">Kontak</a></li>
           </ul>

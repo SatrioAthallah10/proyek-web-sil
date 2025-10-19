@@ -26,7 +26,7 @@
    BAGIAN ATAS (MERAH)
 ===================================== */
 .top-bar {
-  background-color: #c00000; /* Warna merah sesuai referensi */
+  background-color: #6D94C5; /* Warna merah sesuai referensi */
   color: white;
   padding: 10px 0;
   font-size: 0.8rem;
@@ -58,6 +58,7 @@
    BAGIAN BAWAH (PUTIH)
 ===================================== */
 .bottom-bar {
+  background-color: #E8DFCA;
   padding: 15px 0;
   height: 70px; /* Memberi tinggi yang konsisten */
 }
