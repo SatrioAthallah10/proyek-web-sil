@@ -82,6 +82,12 @@
   align-items: center;
 }
 
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Jarak antara menu dan ikon pencarian */
+}
+
 .navbar-links li a {
   text-decoration: none;
   color: #333;
@@ -92,12 +98,12 @@
 }
 
 .navbar-links li a:hover {
-  color: #c00000; /* Warna teks saat di-hover */
+  color: #6D94C5; /* Warna teks saat di-hover */
 }
 
 .navbar-links li a.active-link {
-  color: #c00000;
-  border-bottom: 2px solid #c00000;
+  color: #6D94C5;
+  border-bottom: 2px solid #6D94C5;
 }
 
 .search-icon {

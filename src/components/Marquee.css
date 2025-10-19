@@ -1,6 +1,6 @@
 /* Styling untuk Marquee Section */
 .marquee-section {
-  background-color: #f1f1f1; /* Warna latar belakang abu-abu muda */
+  background-color: #F5EFE6; /* Warna latar belakang abu-abu muda */
   padding: 15px 0;
   overflow: hidden; /* Penting untuk menyembunyikan teks saat di luar layar */
   white-space: nowrap; /* Mencegah teks turun ke baris baru */

@@ -1,40 +1,106 @@
-/* Styling Umum untuk Hero Section */
-.hero-section {
+/* Mengganti nama dari .hero-section menjadi .hero-slider */
+.hero-slider {
   position: relative;
+  height: 70vh;
+  width: 100%;
+  overflow: hidden; /* Penting untuk slider */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh; 
-  color: white;
-  text-align: center;
-  padding: 0 20px;
-  overflow: hidden;
 }
 
-/* OPSI 1: Modern & Profesional */
-.hero-option-1 {
-  /* URL gambar diubah ke path lokal di folder assets */
-  background-image: url('../assets/hero_section.png'); 
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* Animasi fade */
+  z-index: 1;
 }
 
+.slide.active {
+  opacity: 1; /* Slide yang aktif akan terlihat */
+}
+
+/* Overlay tetap sama, tapi pastikan z-index lebih tinggi dari slide */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Lapisan gelap */
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
 }
 
+/* Konten teks harus berada di lapisan paling atas */
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3; /* Paling atas */
+  color: white;
+  text-align: center;
   max-width: 800px;
 }
 
+/* Styling untuk tombol navigasi (panah) */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider-arrow.prev {
+  left: 30px;
+}
+
+.slider-arrow.next {
+  right: 30px;
+}
+
+/* Styling untuk indikator titik (dots) */
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+/* Styling teks (sama seperti sebelumnya) */
 .hero-title {
   font-size: 3.5rem;
   font-weight: 800;
@@ -49,23 +115,6 @@
   margin-bottom: 30px;
   line-height: 1.6;
 }
-
-.hero-cta-button {
-  background-color: #6D94C5; /* Warna merah dari navbar */
-  color: white;
-  padding: 15px 35px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.hero-cta-button:hover {
-  background-color: #CBDCEB;
-  transform: translateY(-3px);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .hero-title {
@@ -73,5 +122,8 @@
   }
   .hero-subtitle {
     font-size: 1.1rem;
+  }
+  .slider-arrow {
+    padding: 10px;
   }
 }
