@@ -1,28 +1,26 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Marquee from './components/Marquee';
-import InformationSection from './components/InformationSection';
-import ClientTicker from './components/ClientTicker';
-import Destinations from './components/Destinations'; // <-- 1. Impor komponen baru
 import Footer from './components/Footer';
-
-import './App.css';
+import Home from './pages/Home';
+import Layanan from './pages/Layanan';
+import PesanLayanan from './pages/PesanLayanan'; // <-- 1. Impor halaman baru
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <Marquee />
-      <InformationSection />
-      <ClientTicker />
-      <Destinations /> {/* <-- 2. Tambahkan komponen di sini */}
-      <main>
-        {/* Konten halaman lainnya nanti akan ada di sini */}
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/layanan" element={<Layanan />} />
+            <Route path="/pesan-layanan" element={<PesanLayanan />} /> {/* <-- 2. Tambahkan route baru */}
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

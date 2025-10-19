@@ -1,5 +1,6 @@
 import React from 'react';
 import './Destinations.css';
+import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 
 // Ganti dengan path gambar Anda di folder assets
@@ -34,13 +35,16 @@ const Destinations = () => {
         
         <div className="destinations-grid">
           {destinations.map((dest, index) => (
-            <div key={index} className="destination-card">
-              <img src={dest.image} alt={`Pengiriman ke ${dest.city}`} className="card-image" />
-              <div className="card-content">
-                <h3>{dest.city}</h3>
-                <p>{dest.description}</p>
+            // 2. Bungkus kartu dengan komponen Link
+            <Link to={`/pesan-layanan?kota=${dest.city}`} key={index} className="destination-card-link">
+              <div className="destination-card">
+                <img src={dest.image} alt={`Pengiriman ke ${dest.city}`} className="card-image" />
+                <div className="card-content">
+                  <h3>{dest.city}</h3>
+                  <p>{dest.description}</p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

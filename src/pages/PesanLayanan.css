@@ -1,0 +1,92 @@
+.pesan-layanan-wrapper {
+  display: flex;
+  min-height: 80vh;
+  width: 100%;
+}
+
+.pesan-image-side {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.pesan-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pesan-form-side {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f4f4f4;
+}
+
+.pesan-form-side form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pesan-form-side h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.pesan-form-side p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.kirim-button {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745; /* Warna hijau dari navbar */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.kirim-button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 992px) {
+  .pesan-layanan-wrapper {
+    flex-direction: column;
+  }
+  .pesan-image-side {
+    display: none; /* Sembunyikan gambar di mobile agar fokus ke form */
+  }
+  .pesan-form-side {
+    padding: 30px 20px;
+  }
+}

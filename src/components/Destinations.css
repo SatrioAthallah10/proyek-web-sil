@@ -96,3 +96,7 @@
     grid-template-columns: 1fr; /* 1 kolom di mobile */
   }
 }
+
+.destination-card-link {
+  text-decoration: none;
+}
