@@ -1,0 +1,69 @@
+/* Styling untuk container utama navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang lebih modern */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box; /* Mencegah padding mempengaruhi lebar total */
+}
+
+/* Styling untuk logo */
+.navbar-logo a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.3em; /* Sedikit lebih besar */
+  font-weight: 400; /* Font normal */
+  letter-spacing: 1px;
+}
+
+.navbar-logo strong {
+  font-weight: 800; /* Font tebal untuk bagian pertama */
+}
+
+/* Styling untuk daftar link navigasi */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 40px; /* Jarak antar link sedikit lebih besar */
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding-bottom: 5px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent; /* Garis bawah transparan */
+}
+
+.navbar-links li a:hover {
+  color: #007bff;
+  border-bottom: 2px solid #007bff; /* Garis bawah muncul saat hover */
+}
+
+/* Styling untuk tombol Call-to-Action (CTA) */
+.navbar-cta-button {
+  background-color: #1a73e8; /* Warna biru yang lebih cerah */
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-cta-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Efek sedikit terangkat saat hover */
+}
