@@ -9,7 +9,7 @@ const Marquee = () => {
         <FaMapMarkerAlt className="location-icon" />
         <p className="marquee-text">
           {/* GANTI ALAMAT INI DENGAN ALAMAT KANTOR ANDA */}
-          Jalan Logistik No. 123, Kawasan Industri Maju, Jakarta, Indonesia 12345
+          Jln.Sidotopo Lor No: 22 A, Kota Surabaya, Indonesia
         </p>
       </div>
     </div>

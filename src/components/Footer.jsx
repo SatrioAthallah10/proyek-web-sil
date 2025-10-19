@@ -39,7 +39,7 @@ const Footer = () => {
       {/* ===== BAGIAN BAWAH (GELAP) ===== */}
       <div className="footer-bottom">
         <div className="container">
-          <p className="copyright-text">&copy; Samudera Indah Lestari 1995-{new Date().getFullYear()}</p>
+          <p className="copyright-text">&copy; S. Athallah Kresno P. 2023-{new Date().getFullYear()}</p>
           <div className="footer-links-bottom">
             <a href="/terms">Terms of Use</a>
             <span>|</span>

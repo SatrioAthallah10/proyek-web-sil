@@ -17,16 +17,16 @@ const Navbar = () => {
         <div className="container">
           <div className="contact-info">
             <span>
-              <FaEnvelope /> Logistic & Warehouse Solution
+              <FaEnvelope /> Logistic Solution
             </span>
             <span>
-              <FaPhone /> 031-3533344
+              <FaPhone /> 082331481710 | 089678366832
             </span>
           </div>
           <div className="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF /> Facebook</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /> Instagram</a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /> Youtube</a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebookF /> Facebook</a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /> Instagram</a>
+            <a href="#" target="_blank" rel="noopener noreferrer"><FaYoutube /> Youtube</a>
           </div>
         </div>
       </div>

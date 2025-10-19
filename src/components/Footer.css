@@ -8,22 +8,23 @@
 }
 
 /* ==================================
-   BAGIAN UTAMA (BIRU MUDA)
+   BAGIAN UTAMA (DIAGONAL)
 ===================================== */
 .footer-main {
-  background-color: #E8DFCA; /* Warna biru muda yang Anda minta */
+  background: linear-gradient(105deg, #E8DFCA 55%, #28a745 55%);
   padding: 60px 0;
 }
 
 .footer-main .container {
   display: flex;
-  flex-wrap: wrap; /* Agar responsif di layar kecil */
-  gap: 30px;
+  flex-wrap: wrap;
+  /* Mengubah 'gap' menjadi 'justify-content' untuk mendorong item ke ujung */
+  justify-content: space-between; 
 }
 
 .footer-column {
-  flex: 1;
-  min-width: 200px; /* Lebar minimum untuk setiap kolom */
+  /* Menghapus 'flex: 1' agar kolom tidak meregang */
+  min-width: 200px;
 }
 
 .footer-column h3 {
@@ -32,7 +33,7 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #1a237e; /* Warna biru tua untuk judul */
+  color: #1a237e;
 }
 
 .footer-column ul {
@@ -53,7 +54,7 @@
 }
 
 .footer-column ul a:hover {
-  color: #c00000; /* Warna merah saat di-hover */
+  color: #c00000;
 }
 
 .social-icons {
@@ -67,17 +68,22 @@
   transition: color 0.3s ease;
 }
 
+.footer-column:last-child h3,
+.footer-column:last-child .social-icons a {
+  color: white;
+}
+
 .social-icons a:hover {
-  color: #c00000;
+  opacity: 0.8;
 }
 
 
 /* ==================================
-   BAGIAN BAWAH (GELAP)
+   BAGIAN BAWAH (BIRU)
 ===================================== */
 .footer-bottom {
-  background-color: #6D94C5; /* Warna abu-abu sangat gelap */
-  color: #adb5bd;
+  background-color: #0BA6DF;
+  color: white;
   padding: 20px 0;
   font-size: 0.8rem;
 }
@@ -86,11 +92,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Responsif */
+  flex-wrap: wrap;
 }
 
 .copyright-text {
   margin: 0;
+  color: white;
 }
 
 .footer-links-bottom {
@@ -101,17 +108,31 @@
 
 .footer-links-bottom a {
   text-decoration: none;
-  color: #adb5bd;
-  transition: color 0.3s ease;
+  color: white;
+  transition: opacity 0.3s ease;
 }
 
 .footer-links-bottom a:hover {
-  color: #ffffff;
+  opacity: 0.8;
 }
 
 /* ==================================
    RESPONSIVE DESIGN
 ===================================== */
+@media (max-width: 992px) {
+  .footer-main {
+    background: #E8DFCA;
+  }
+  
+  .footer-column:last-child h3 {
+    color: #1a237e;
+  }
+  
+  .footer-column:last-child .social-icons a {
+    color: #333;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-main .container {
     flex-direction: column;

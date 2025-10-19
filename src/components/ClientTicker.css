@@ -1,0 +1,58 @@
+.client-ticker-section {
+  padding: 40px 0;
+  background-color: #F5EFE6; /* Warna latar abu-abu muda */
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.ticker-title {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden; /* Penting untuk menyembunyikan konten yang keluar layar */
+  white-space: nowrap; /* Mencegah item turun baris */
+}
+
+.ticker-content {
+  display: inline-block;
+  animation: ticker-scroll 40s linear infinite; /* Durasi animasi bisa disesuaikan */
+}
+
+.ticker-item {
+  display: inline-flex; /* Menggunakan inline-flex agar ikon dan teks sejajar */
+  align-items: center;
+  margin: 0 30px; /* Jarak antar nama klien */
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.ticker-separator {
+  color: #6D94C5; /* Warna biru dari navbar */
+  margin-left: 30px;
+  font-size: 0.8rem;
+}
+
+/* Animasi scrolling dari kanan ke kiri */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    /* Setengah dari lebar total karena kita duplikasi listnya */
+    transform: translateX(-33.33%); 
+  }
+}
+
+/* Hentikan animasi saat kursor di atasnya */
+.ticker-wrap:hover .ticker-content {
+  animation-play-state: paused;
+}
