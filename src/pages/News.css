@@ -1,10 +1,6 @@
 /* ==================================
    NEWS PAGE STYLES
-   Based on existing Samudera Indah Lestari design
-   SEO-Optimized Version
 ===================================== */
-
-/* Container consistent with other pages */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -12,103 +8,43 @@
 }
 
 /* ==================================
-   NEWS HEADER SECTION
-===================================== */
-.news-header {
-  background: linear-gradient(105deg, #E8DFCA 55%, #28a745 55%);
-  padding: 60px 20px;
-  text-align: center;
-  color: #333;
-}
-
-.news-header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #1a237e;
-}
-
-.news-header p {
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto 30px auto;
-}
-
-/* SEO-friendly breadcrumb */
-.breadcrumb {
-  margin-top: 20px;
-}
-
-.breadcrumb ol {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 10px;
-  font-size: 0.9rem;
-}
-
-.breadcrumb li {
-  color: #666;
-}
-
-.breadcrumb li:not(:last-child)::after {
-  content: "›";
-  margin-left: 10px;
-  color: #999;
-}
-
-.breadcrumb a {
-  color: #6D94C5;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.breadcrumb a:hover {
-  color: #0BA6DF;
-}
-
-.breadcrumb li[aria-current="page"] {
-  color: #333;
-  font-weight: 600;
-}
-
-/* ==================================
    SEARCH AND FILTER SECTION
 ===================================== */
 .news-filters {
-  background-color: #f8f9fa;
-  padding: 40px 20px;
+  padding: 50px 20px;
+  background-color: #F5EFE6;
   border-bottom: 1px solid #e9ecef;
 }
 
-.filter-row {
-  margin-bottom: 30px;
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .search-box {
   position: relative;
-  max-width: 600px;
-  margin: 0 auto;
+  flex-grow: 1;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 .search-box .search-icon {
   position: absolute;
-  left: 15px;
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: #6D94C5;
-  font-size: 1.1rem;
+  color: #aaa;
+  font-size: 1rem;
 }
 
 .search-box input {
   width: 100%;
-  padding: 18px 15px 18px 45px;
-  border: 2px solid #e9ecef;
-  border-radius: 8px;
+  padding: 15px 20px 15px 50px;
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -116,137 +52,69 @@
 .search-box input:focus {
   outline: none;
   border-color: #6D94C5;
-  box-shadow: 0 0 0 3px rgba(109, 148, 197, 0.1);
+  box-shadow: 0 0 0 4px rgba(109, 148, 197, 0.1);
 }
 
 .category-tabs {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .category-tab {
-  padding: 12px 24px;
-  background-color: white;
-  border: 2px solid #e9ecef;
-  border-radius: 25px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
-  color: #666;
+  color: #555;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .category-tab:hover {
-  border-color: #6D94C5;
-  color: #6D94C5;
+  background-color: #f0f0f0;
+  border-color: #ccc;
 }
 
 .category-tab.active {
   background-color: #6D94C5;
   border-color: #6D94C5;
   color: white;
-}
-
-/* ==================================
-   EMPTY STATE SECTION
-===================================== */
-.empty-state {
-  text-align: center;
-  padding: 80px 20px;
-  color: #666;
-}
-
-.empty-icon {
-  font-size: 4rem;
-  color: #ccc;
-  margin-bottom: 30px;
-}
-
-.empty-state h2 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.empty-state p {
-  font-size: 1rem;
-  color: #666;
-  max-width: 500px;
-  margin: 0 auto 30px auto;
-  line-height: 1.6;
-}
-
-.reset-btn {
-  background-color: #6D94C5;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 0.9rem;
   font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.reset-btn:hover {
-  background-color: #0BA6DF;
 }
 
 /* ==================================
-   NEWS RESULTS HEADER
-===================================== */
-.news-results-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.news-results-header h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.news-results-header p {
-  color: #666;
-  font-size: 1rem;
-}
-
-/* ==================================
-   NEWS CONTENT SECTION
+   MAIN NEWS CONTENT
 ===================================== */
 .news-content {
   padding: 60px 20px;
-  background-color: white;
-  min-height: 400px;
+  background-color: #F5EFE6;
 }
 
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .news-card {
-  background: white;
+  background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 4px solid #6D94C5;
+  display: flex;
+  flex-direction: column;
 }
 
 .news-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .news-image {
-  position: relative;
   height: 200px;
   overflow: hidden;
 }
@@ -255,69 +123,49 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
 }
 
-.news-card:hover .news-image img {
-  transform: scale(1.05);
-}
-
-.featured-badge {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background-color: #0BA6DF;
-  color: white;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.news-content {
+.card-news-content {
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-/* ==================================
-   NEWS META INFORMATION
-===================================== */
 .news-meta {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 
 .news-category {
-  background-color: #6D94C5;
-  color: white;
-  padding: 4px 12px;
+  background-color: #e3f2fd;
+  color: #6D94C5;
+  padding: 5px 12px;
   border-radius: 15px;
   font-size: 0.8rem;
   font-weight: 600;
-  text-transform: uppercase;
 }
 
 .news-date {
   display: flex;
   align-items: center;
   gap: 5px;
-  color: #666;
+  color: #888;
   font-size: 0.85rem;
 }
 
-.news-content h3 {
-  font-size: 1.3rem;
+.card-news-content h3 {
+  font-size: 1.25rem;
   font-weight: 700;
   color: #333;
-  margin-bottom: 12px;
+  margin: 0 0 12px 0;
   line-height: 1.4;
+  flex-grow: 1;
 }
 
-.news-content p {
+.news-excerpt {
   color: #666;
   font-size: 0.95rem;
   line-height: 1.6;
@@ -328,255 +176,88 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  border-top: 1px solid #e9ecef;
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+  margin-top: auto;
 }
 
 .news-author {
   display: flex;
   align-items: center;
-  gap: 5px;
-  color: #666;
+  gap: 8px;
+  color: #888;
   font-size: 0.85rem;
 }
 
 .read-more-btn {
-  background: none;
-  border: none;
   color: #6D94C5;
-  font-size: 0.9rem;
   font-weight: 600;
-  cursor: pointer;
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 5px;
-  transition: color 0.3s ease, gap 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .read-more-btn:hover {
-  color: #0BA6DF;
-  gap: 8px;
+  color: #28a745;
 }
 
 /* ==================================
-   NEWSLETTER SECTION
+   EMPTY STATE - BAGIAN YANG DIPERBARUI
 ===================================== */
-.newsletter-section {
-  background: linear-gradient(105deg, #0BA6DF 55%, #6D94C5 55%);
-  padding: 60px 20px;
-  color: white;
-}
-
-.newsletter-content {
+.empty-state {
+  display: flex; /* Menggunakan flexbox untuk centering */
+  flex-direction: column; /* Menumpuk item secara vertikal */
+  justify-content: center; /* Posisi vertikal di tengah */
+  align-items: center; /* Posisi horizontal di tengah */
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
+  padding: 80px 20px;
+  min-height: 400px; /* Memberi tinggi minimum agar centering terlihat */
+  width: 100%;
 }
 
-.newsletter-content h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 15px;
+.empty-icon {
+  font-size: 4rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
 }
 
-.newsletter-content p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  opacity: 0.9;
+.empty-state h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-.newsletter-form {
-  display: flex;
-  gap: 12px;
-  max-width: 500px;
-  margin: 0 auto;
+.empty-state p {
+  color: #888;
+  margin-bottom: 20px;
 }
 
-.newsletter-form input {
-  flex: 1;
-  padding: 15px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.newsletter-btn {
-  background-color: #28a745;
+.reset-btn {
+  background-color: #6D94C5;
   color: white;
   border: none;
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.newsletter-btn:hover {
-  background-color: #218838;
+.reset-btn:hover {
+  background-color: #5a7da8;
 }
 
-/* ==================================
-   SEO CONTENT SECTION
-===================================== */
-.seo-content {
-  background-color: #f8f9fa;
-  padding: 60px 20px;
-  border-top: 1px solid #e9ecef;
-}
-
-.seo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.seo-item {
-  text-align: center;
-  padding: 30px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #6D94C5;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.seo-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.seo-item h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.seo-item p {
-  color: #666;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-/* ==================================
-   RESPONSIVE DESIGN
-===================================== */
+/* Responsive */
 @media (max-width: 992px) {
-  .news-header {
-    background: #E8DFCA;
-  }
-  
-  .newsletter-section {
-    background: #0BA6DF;
-  }
-  
-  .news-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-  
-  .seo-grid {
-    grid-template-columns: 1fr;
+  .filter-container {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
 @media (max-width: 768px) {
-  .news-header h1 {
-    font-size: 2rem;
-  }
-  
-  .news-header p {
-    font-size: 1rem;
-  }
-  
-  .news-results-header h2 {
-    font-size: 1.5rem;
-  }
-  
   .news-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  .category-tabs {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 10px;
-  }
-  
-  .category-tab {
-    flex-shrink: 0;
-  }
-  
-  .newsletter-form {
-    flex-direction: column;
-  }
-  
-  .newsletter-btn {
-    width: 100%;
-  }
-  
-  .news-meta {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .news-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  
-  .breadcrumb ol {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .news-header {
-    padding: 40px 15px;
-  }
-  
-  .news-filters {
-    padding: 30px 15px;
-  }
-  
-  .news-content {
-    padding: 40px 15px;
-  }
-  
-  .newsletter-section {
-    padding: 40px 15px;
-  }
-  
-  .seo-content {
-    padding: 40px 15px;
-  }
-  
-  .news-content {
-    padding: 20px;
-  }
-  
-  .empty-state {
-    padding: 60px 15px;
-  }
-  
-  .empty-icon {
-    font-size: 3rem;
-  }
-  
-  .empty-state h2 {
-    font-size: 1.5rem;
-  }
-  
-  .news-content h3 {
-    font-size: 1.1rem;
-  }
-  
-  .seo-item {
-    padding: 20px;
   }
 }

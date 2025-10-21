@@ -87,32 +87,32 @@
   gap: 40px;
 }
 
-/* PERUBAHAN WARNA TEKS DIMULAI DARI SINI */
-.navbar-links li a {
+/* 3. Ganti .navbar-links li a menjadi .navbar-links a */
+.navbar-links a {
   text-decoration: none;
-  color: white; /* Diubah dari #333 menjadi putih */
+  color: white;
   font-weight: 600;
   font-size: 1rem;
   padding-bottom: 5px;
+  border-bottom: 2px solid transparent; /* Garis bawah transparan secara default */
   transition: color 0.3s ease;
 }
 
-.navbar-links li a:hover {
-  color: rgba(255, 255, 255, 0.8); /* Efek hover menjadi putih transparan */
+.navbar-links a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.navbar-links li a.active-link {
-  color: white; /* Diubah menjadi putih */
-  border-bottom: 2px solid white; /* Diubah menjadi putih */
+/* Aturan ini akan diterapkan oleh NavLink secara otomatis */
+.navbar-links a.active-link {
+  color: white;
+  border-bottom: 2px solid white;
 }
 
 .search-icon {
   font-size: 1.3rem;
-  color: white; /* Diubah dari #333 menjadi putih */
+  color: white;
   cursor: pointer;
 }
-/* PERUBAHAN WARNA TEKS BERAKHIR DI SINI */
-
 
 .menu-icon {
   display: none;
@@ -137,16 +137,16 @@
   .bottom-bar {
     background: #E8DFCA;
   }
-  /* Kembalikan warna teks ke hitam saat background diagonal hilang */
-  .navbar-links li a,
+  
+  .navbar-links a,
   .search-icon {
     color: #333;
   }
-  .navbar-links li a.active-link {
+  .navbar-links a.active-link {
     color: #6D94C5;
     border-bottom-color: #6D94C5;
   }
-  .navbar-links li a:hover {
+  .navbar-links a:hover {
     color: #6D94C5;
   }
 }

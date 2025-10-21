@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom'; // 1. Ganti Link/a dengan NavLink
 import Logo from '../assets/samudera-letari.svg'; 
 import { FaEnvelope, FaPhone, FaFacebookF, FaInstagram, FaYoutube, FaSearch, FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
@@ -48,10 +49,11 @@ const Navbar = () => {
           {/* Grup baru untuk item di sebelah kanan */}
           <div className="navbar-right">
             <ul className={isMobileMenuOpen ? 'navbar-links active' : 'navbar-links'}>
-              <li><a href="/" className="active-link">Home</a></li>
-              <li><a href="/layanan">Layanan</a></li>
-              <li><a href="/news">News</a></li>
-              <li><a href="/kontak">Kontak</a></li>
+              {/* 2. Ganti semua tag <a> dengan <NavLink> */}
+              <li><NavLink to="/" className={({isActive}) => isActive ? "active-link" : ""}>Home</NavLink></li>
+              <li><NavLink to="/layanan" className={({isActive}) => isActive ? "active-link" : ""}>Layanan</NavLink></li>
+              <li><NavLink to="/news" className={({isActive}) => isActive ? "active-link" : ""}>News</NavLink></li>
+              <li><NavLink to="/kontak" className={({isActive}) => isActive ? "active-link" : ""}>Kontak</NavLink></li>
             </ul>
 
             <div className="search-icon">
