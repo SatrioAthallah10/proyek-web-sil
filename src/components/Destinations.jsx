@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 
 // Ganti dengan path gambar Anda di folder assets
-import jakartaImg from '../assets/jkt.jpg';
-import surabayaImg from '../assets/sby.jpg';
-import medanImg from '../assets/mdn.jpg';
+import lbjImg from '../assets/lbj.jpg';
+import srgImg from '../assets/srg.jpg';
+import tntImg from '../assets/tnt.jpg';
 
 const destinations = [
   {
-    image: jakartaImg, // Ganti dengan jakartaImg
-    city: 'Jakarta',
-    description: 'Jangkauan pengiriman cepat dan efisien di seluruh wilayah Jabodetabek, pusat bisnis dan distribusi Indonesia.'
+    image: lbjImg, // Ganti dengan jakartaImg
+    city: 'Labuan Bajo',
+    description: 'Mendukung denyut pariwisata dan bisnis lokal dengan layanan logistik yang cepat dan terpercaya.'
   },
   {
-    image: surabayaImg, // Ganti dengan surabayaImg
-    city: 'Surabaya',
-    description: 'Solusi logistik terintegrasi untuk mendukung industri dan perdagangan di gerbang utama Indonesia Timur.'
+    image: srgImg, // Ganti dengan surabayaImg
+    city: 'Sorong',
+    description: 'Gerbang logistik utama Anda untuk kelancaran industri dan perdagangan di seluruh Indonesia Timur.'
   },
   {
-    image: medanImg, // Ganti dengan medanImg
-    city: 'Medan',
-    description: 'Menghubungkan Sumatera ke seluruh nusantara dengan layanan kargo darat dan laut yang terpercaya.'
+    image: tntImg, // Ganti dengan medanImg
+    city: 'Ternate',
+    description: 'Menghubungkan kepulauan Maluku dengan jaringan kargo laut yang efisien dan dapat diandalkan.'
   }
 ];
 
@@ -48,7 +48,7 @@ const Destinations = () => {
           ))}
         </div>
 
-        <a href="/jangkauan" className="see-more-link">
+        <a href="/layanan" className="see-more-link">
           Lihat daerah lain <FaArrowRight />
         </a>
       </div>

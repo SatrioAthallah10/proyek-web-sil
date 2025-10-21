@@ -15,8 +15,6 @@ const Footer = () => {
             <ul>
               <li><a href="/tentang">Tentang Kami</a></li>
               <li><a href="/news">Ruang Berita</a></li>
-              <li><a href="/investor">Relasi Investor</a></li>
-              <li><a href="/karir">Karir</a></li>
               <li><a href="/syarat">Syarat dan Ketentuan</a></li>
             </ul>
           </div>

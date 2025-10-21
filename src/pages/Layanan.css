@@ -1,5 +1,6 @@
 .layanan-page {
-  padding: 40px 20px;
+  padding: 60px 20px;
+  background-color: #ffffff; /* Mengganti latar belakang menjadi putih solid */
 }
 
 .layanan-header {
@@ -11,6 +12,7 @@
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .layanan-header p {
@@ -27,38 +29,42 @@
 
 .area-list {
   display: grid;
-  /* Membuat 4 kolom di desktop, dan akan menyesuaikan di layar lebih kecil */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Sedikit lebih lebar untuk tampilan card */
+  gap: 30px; /* Jarak antar kartu */
+}
+
+/* Menghilangkan dekorasi teks default dari Link */
+.area-link {
+  text-decoration: none;
 }
 
 .area-item {
   display: flex;
   align-items: center;
-  background-color: #f8f9fa;
-  padding: 15px;
+  background-color: #ffffff;
+  padding: 20px;
   border-radius: 8px;
-  border-left: 5px solid #6D94C5; /* Aksen warna biru */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* Mengganti border dengan box-shadow yang lebih halus */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .area-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
 .area-icon {
   color: #6D94C5;
-  font-size: 1.2rem;
+  font-size: 1.5rem; /* Ikon sedikit lebih besar */
   margin-right: 15px;
+  background-color: #e3f2fd; /* Memberi latar belakang pada ikon */
+  padding: 10px;
+  border-radius: 50%;
 }
 
 .area-item span {
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 600; /* Teks lebih tebal */
   color: #333;
-}
-
-.area-link {
-  text-decoration: none; /* Menghilangkan garis bawah dari link */
 }
