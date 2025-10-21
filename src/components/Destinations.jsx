@@ -6,7 +6,7 @@ import { FaArrowRight } from 'react-icons/fa';
 // Ganti dengan path gambar Anda di folder assets
 import lbjImg from '../assets/lbj.jpg';
 import srgImg from '../assets/srg.jpg';
-import tntImg from '../assets/tnt.jpg';
+import tntImg from '../assets/trnte.jpg';
 
 const destinations = [
   {
