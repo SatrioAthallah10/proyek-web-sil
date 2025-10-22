@@ -1,0 +1,142 @@
+/* ==================================
+   WRAPPER UTAMA FOOTER
+===================================== */
+.mbe-footer-wrapper {
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* ==================================
+   BAGIAN UTAMA (DIAGONAL SESUAI NAVBAR)
+===================================== */
+.mbe-footer-main {
+  /* Warna disesuaikan dengan MutiaraBundaNavbar.css */
+  background: linear-gradient(105deg, #B1D6F0 55%, #F03433 55%);
+  padding: 60px 0;
+}
+
+.mbe-footer-main .mbe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+
+.mbe-footer-column {
+  min-width: 200px;
+}
+
+.mbe-footer-column h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #1a237e;
+}
+
+.mbe-footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mbe-footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.mbe-footer-column ul a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.mbe-footer-column ul a:hover {
+  color: #c00000;
+}
+
+.mbe-social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Mengubah warna teks dan ikon di sisi merah */
+.mbe-footer-column:last-child h3,
+.mbe-footer-column:last-child .mbe-social-icons a {
+  color: white;
+}
+
+.mbe-social-icons a:hover {
+  opacity: 0.8;
+}
+
+/* ==================================
+   BAGIAN BAWAH (BIRU GELAP SESUAI NAVBAR)
+===================================== */
+.mbe-footer-bottom {
+  /* Warna disesuaikan dengan MutiaraBundaNavbar.css */
+  background-color: #0348A3;
+  color: white;
+  padding: 20px 0;
+  font-size: 0.8rem;
+}
+
+.mbe-footer-bottom .mbe-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mbe-copyright-text {
+  margin: 0;
+  color: white;
+}
+
+.mbe-footer-links-bottom {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mbe-footer-links-bottom a {
+  text-decoration: none;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.mbe-footer-links-bottom a:hover {
+  opacity: 0.8;
+}
+
+/* ==================================
+   RESPONSIVE DESIGN
+===================================== */
+@media (max-width: 992px) {
+  .mbe-footer-main {
+    /* Menghilangkan gradien di mobile agar teks mudah dibaca */
+    background: #B1D6F0;
+  }
+  
+  /* Menyesuaikan warna teks kembali agar terlihat */
+  .mbe-footer-column:last-child h3 {
+    color: #1a237e;
+  }
+  
+  .mbe-footer-column:last-child .mbe-social-icons a {
+    color: #333;
+  }
+}
+
+@media (max-width: 768px) {
+  .mbe-footer-main .mbe-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .mbe-footer-bottom .mbe-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

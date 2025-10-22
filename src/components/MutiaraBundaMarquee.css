@@ -1,0 +1,43 @@
+/* Styling untuk Marquee Section */
+.mbe-marquee-section {
+  /* Warna disesuaikan dengan tema Mutiara Bunda (#B1D6F0 dari navbar) */
+  background-color: #B1D6F0;
+  padding: 15px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid #a1c6e0; /* Warna border yang sedikit lebih gelap */
+  border-bottom: 1px solid #a1c6e0;
+}
+
+.mbe-marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee-animation 25s linear infinite;
+  display: flex;
+  align-items: center;
+}
+
+.mbe-location-icon {
+  /* Warna merah dari tema Mutiara Bunda */
+  color: #F03433;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.mbe-marquee-text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  font-family: "Merriweather", serif;
+}
+
+/* Keyframes animasi tidak perlu diubah */
+@keyframes marquee-animation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

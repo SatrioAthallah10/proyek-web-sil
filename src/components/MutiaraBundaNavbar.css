@@ -1,0 +1,119 @@
+/* ==================================
+   SETUP UTAMA & CONTAINER
+===================================== */
+/* Semua nama kelas diawali dengan 'mbe-' */
+.mbe-navbar-wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.mbe-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+/* ==================================
+   BAGIAN ATAS (BIRU)
+===================================== */
+.mbe-top-bar {
+  background-color: #0348A3;
+  color: white;
+  padding: 10px 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.mbe-contact-info,
+.mbe-social-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.mbe-contact-info span,
+.mbe-social-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.mbe-social-links a:hover {
+  opacity: 0.8;
+}
+
+/* ==================================
+   BAGIAN BAWAH (DIAGONAL)
+===================================== */
+.mbe-bottom-bar {
+  background: linear-gradient(105deg, #B1D6F0 55%, #F03433 55%);
+  padding: 15px 0;
+  height: 70px;
+}
+
+.mbe-navbar-logo a {
+  display: flex;
+  align-items: center;
+}
+
+.mbe-navbar-logo-img {
+  height: 80px;
+  width: auto;
+}
+
+.mbe-navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 35px;
+  align-items: center;
+}
+
+.mbe-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* === PERBAIKAN FINAL ADA DI SINI === */
+.mbe-navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  display: inline-block;  /* ← Penting untuk mencegah dua baris */
+  line-height: 1.2;      /* ← Mengontrol tinggi baris */
+}
+
+.mbe-navbar-links a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Aturan ini sekarang hanya akan mengubah warna border dari transparan menjadi putih */
+.mbe-navbar-links a.active-link {
+  color: white;
+  border-bottom-color: white; /* ← Hanya border yang berubah */
+}
+
+.mbe-menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}

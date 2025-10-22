@@ -1,0 +1,92 @@
+.mbe-pesan-layanan-wrapper {
+  display: flex;
+  min-height: 80vh;
+  width: 100%;
+}
+
+.mbe-pesan-image-side {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.mbe-pesan-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mbe-pesan-form-side {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #F5EFE6;
+}
+
+.mbe-pesan-form-side form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mbe-pesan-form-side h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.mbe-pesan-form-side p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.mbe-form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mbe-form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+.mbe-form-group input,
+.mbe-form-group textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.mbe-kirim-button {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #F03433; /* Warna merah dari tema MBE */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mbe-kirim-button:hover {
+  background-color: #d02a29; /* Warna merah lebih gelap */
+}
+
+@media (max-width: 992px) {
+  .mbe-pesan-layanan-wrapper {
+    flex-direction: column;
+  }
+  .mbe-pesan-image-side {
+    display: none;
+  }
+  .mbe-pesan-form-side {
+    padding: 30px 20px;
+  }
+}

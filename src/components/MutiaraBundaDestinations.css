@@ -1,0 +1,105 @@
+.mbe-destinations-section {
+  padding: 60px 20px;
+  background-color: #F5EFE6; /* Warna latar belakang netral */
+}
+
+.mbe-destinations-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mbe-destinations-title {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+}
+
+.mbe-destinations-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Merriweather", serif;
+}
+
+.mbe-destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.mbe-destination-card {
+  background-color: #B1D6F0; /* Warna biru muda dari tema MBE */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Merriweather", serif;
+}
+
+.mbe-destination-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mbe-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.mbe-card-content {
+  padding: 25px;
+}
+
+.mbe-card-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  color: #0348A3; /* Warna biru gelap dari tema MBE */
+}
+
+.mbe-card-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333; /* Warna teks gelap agar mudah dibaca */
+}
+
+.mbe-see-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #0348A3; /* Warna biru gelap dari tema MBE */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.mbe-see-more-link:hover {
+  color: #F03433; /* Warna merah dari tema MBE saat hover */
+}
+
+/* Responsive Desaign */
+@media (max-width: 992px) {
+  .mbe-destinations-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .mbe-destinations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mbe-destination-card-link {
+  text-decoration: none;
+}

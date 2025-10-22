@@ -1,0 +1,78 @@
+/* Container full-width dengan warna latar belakang yang netral */
+.mbe-info-container {
+  display: flex;
+  min-height: 500px;
+  background-color: #F5EFE6;
+}
+
+/* Sisi Gambar (Kiri) */
+.mbe-info-image-side {
+  flex-basis: 50%;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+}
+
+/* Sisi Teks (Kanan) */
+.mbe-info-text-side {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+}
+
+.mbe-text-content {
+  padding: 40px 40px 40px 80px; 
+  max-width: 500px;
+  font-family: "Merriweather", serif;
+}
+
+/* Penyesuaian Warna Sesuai Tema Mutiara Bunda Express */
+.mbe-text-content h2 {
+  font-size: 2.2rem;
+  color: #0348A3; /* Warna biru gelap dari tema MBE */
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.mbe-text-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.mbe-info-button {
+  background-color: #F03433; /* Warna merah dari tema MBE */
+  color: white;
+  padding: 12px 28px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.mbe-info-button:hover {
+  background-color: #d02a29; /* Warna merah lebih gelap saat hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mbe-info-container {
+    flex-direction: column;
+  }
+
+  .mbe-info-image-side {
+    min-height: 250px;
+    clip-path: none;
+  }
+
+  .mbe-text-content {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .mbe-info-text-side {
+    justify-content: center;
+  }
+}
