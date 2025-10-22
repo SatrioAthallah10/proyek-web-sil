@@ -55,10 +55,6 @@ const Navbar = () => {
               <li><NavLink to="/news" className={({isActive}) => isActive ? "active-link" : ""}>News</NavLink></li>
               <li><NavLink to="/kontak" className={({isActive}) => isActive ? "active-link" : ""}>Kontak</NavLink></li>
             </ul>
-
-            <div className="search-icon">
-              <FaSearch />
-            </div>
           </div>
         </div>
       </nav>

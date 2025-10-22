@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import './Layanan.css';
-import { FaMapMarkedAlt } from 'react-icons/fa';
+import { FaMapMarkedAlt, FaSearch } from 'react-icons/fa';
 
-// Daftar kota lengkap
 const serviceAreas = [
-  // Daftar Lama
   'Balikpapan', 'Samarinda', 'Panajam', 'Berau', 'Nunukan', 'Sendawar', 
   'Tenggarong', 'Sanggata', 'Tanah Grogot', 'Bontang', 'Banjarmasin', 
   'Watampone', 'Enrekang', 'Banggae', 'Mamuju', 'Polewali', 
@@ -13,7 +11,6 @@ const serviceAreas = [
   'Makassar', 'Konawe', 'Muna', 'Baubau', 'Jeneponto', 'Sorong', 
   'Manokwari', 'Merauke', 'Timika', 'Jayapura', 'Kaimana', 'Biak', 
   'Tarakan', 'Kutai Kartanegara', 'Bulukumba', 'Minahasa', 'Nabire',
-  // Daftar Baru dari Screenshot
   'Lampung', 'Palembang', 'Jambi', 'Pekan Baru', 'Medan', 'Aceh', 
   'Tanjung Pinang', 'Batam', 'Denpasar', 'Lombok', 'Sumbawa', 'Bima', 
   'Labuan Bajo', 'Ruteng', 'Bajawa', 'Ende', 'Maumere', 'Larantuka', 
@@ -23,30 +20,65 @@ const serviceAreas = [
   'Masohi', 'Saumlaki', 'Bacan'
 ];
 
-// Menghapus duplikasi dan mengurutkan berdasarkan abjad
 const uniqueSortedAreas = [...new Set(serviceAreas)].sort();
 
 const Layanan = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredAreas = useMemo(() => {
+    if (!searchTerm) {
+      return uniqueSortedAreas;
+    }
+    return uniqueSortedAreas.filter(area =>
+      area.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm]);
+
   return (
     <div className="layanan-page">
       <div className="layanan-header">
         <h1>Area Jangkauan Layanan Kami</h1>
         <p>Kami menjangkau kota-kota besar dan daerah terpencil di seluruh nusantara untuk memastikan distribusi Anda berjalan lancar.</p>
-      </div>
-      <div className="layanan-container">
-        <div className="area-list">
-          {uniqueSortedAreas.map((area, index) => (
-            <Link to={`/pesan-layanan?kota=${area}`} key={index} className="area-link">
-              <div className="area-item">
-                <FaMapMarkedAlt className="area-icon" />
-                <span>{area}</span>
-              </div>
-            </Link>
-          ))}
+        
+        <div className="layanan-search-container">
+          <div className="layanan-search-bar">
+            <FaSearch className="search-icon-layanan" />
+            <input
+              type="search"
+              placeholder="Cari kota atau daerah..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+              aria-label="Cari daerah layanan"
+            />
+          </div>
         </div>
+      </div>
+      
+      <div className="layanan-container">
+        {filteredAreas.length > 0 ? (
+          <div className="area-list">
+            {filteredAreas.map((area, index) => (
+              <Link to={`/pesan-layanan?kota=${area}`} key={index} className="area-link">
+                <div className="area-item">
+                  <FaMapMarkedAlt className="area-icon" />
+                  <span>{area}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="no-results">
+            <p>Daerah "{searchTerm}" tidak ditemukan.</p>
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
 export default Layanan;
+
